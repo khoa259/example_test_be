@@ -11,9 +11,9 @@ import { upload } from "../middleware/uploadFile.js";
 
 export const productRoute = Router();
 
-productRoute.post("/create", createProduct);
-productRoute.get("/list", getProduct);
-productRoute.get("/detail/:id", read);
-productRoute.put("/update/:id", updateProduct);
-productRoute.delete("/delete/:id", removeProduct);
-productRoute.post("/upload", upload.single("images"), uploadImages);
+productRoute.post("/product/create", createProduct);
+productRoute.get("/product/list", getProduct);
+productRoute.get("/product/detail/:id", read);
+productRoute.put("/product/update/:id", updateProduct);
+productRoute.delete("/product/delete/:id", removeProduct);
+productRoute.post("/product/upload", upload.single("images"), uploadImages);
