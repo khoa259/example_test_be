@@ -18,9 +18,12 @@ app.use("/api/v1", userRoute);
 app.use("/api/v1/product", productRoute);
 
 mongoose
-  .connect("mongodb://0.0.0.0:27017/exemple-test", {
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "mongodb+srv://khoa10688:RlZPJFLL5F7wlwS3@cluster0.mb2qvkx.mongodb.net/",
+    {
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => {
     console.log("connect success port", port);
   })
